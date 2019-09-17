@@ -3,6 +3,12 @@
 * Allow defining a maximum video resolution, to scale the video down if larger than X
 * Allow setting CRF based on output resolution (4k:22, 1080:20, 720p:18 or something)
 * Allow profile tuning; eg. Anime/Cartoon // Film
+* Allow for hardware decoding of h264
+
+```
+ffmpeg -hwaccel cuvid -c:v h264_cuvid -i "C:\path\to\video.mkv" -tune film -c:v hevc_nvenc -profile:v main -preset slow -crf 20 -c:a:0 copy "C:\path\to\output.mkv"
+## Params before "-i" are decode.
+```
 
 # convert-to-hevc
 
