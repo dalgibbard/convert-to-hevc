@@ -1,3 +1,9 @@
+# TODO:
+* Map multiple video/audio/subtitle streams to retain original setup
+* Allow defining a maximum video resolution, to scale the video down if larger than X
+* Allow setting CRF based on output resolution (4k:22, 1080:20, 720p:18 or something)
+* Allow profile tuning; eg. Anime/Cartoon // Film
+
 # convert-to-hevc
 
 Script to convert multiple video files into HEVC\x265 using the nvenc hardware codec and copy the audio.  The resulting video file will have 1 video\audio\subtitle stream from the source video (if they exist.  i.e. if the source has no subtitles then there will be none in the destination).
